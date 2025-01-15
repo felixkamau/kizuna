@@ -47,11 +47,8 @@ Once **Kizuna** is installed, you can start using it with the following commands
 
 ```bash
 kizuna rpc list
-
-
-
-
+```
 
 ## why kizuna
 
-`kizuna` means means [connection]
+`kizuna` means means [connection] in japanese
