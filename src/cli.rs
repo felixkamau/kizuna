@@ -15,16 +15,16 @@ pub fn build_cli() -> Command {
                     Command::new("add")
                         .about("Add a new RPC URL")
                         .arg(Arg::new("url").help("The RPC URL to add").required(true)),
-                ),
-        )
-        .subcommand(
-            Command::new("remove")
-                .about("Remove an existing RPC URL")
-                .arg(
-                    Arg::new("url")
-                        .short('r')
-                        .help("The RPC URL you want to remove")
-                        .required(true),
-                ),
+                )
+                .subcommand(
+                    Command::new("remove")
+                        .about("Remove an existing RPC URL")
+                        .arg(
+                            Arg::new("url")
+                                .short('r')
+                                .help("The RPC URL you want to remove")
+                                .required(true),
+                        ),
+                )
         )
 }
