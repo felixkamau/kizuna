@@ -22,6 +22,7 @@ pub fn build_cli() -> Command {
                         .arg(
                             Arg::new("url")
                                 .short('r')
+                                .long("url")
                                 .help("The RPC URL you want to remove")
                                 .required(true),
                         ),
