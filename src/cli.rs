@@ -3,7 +3,7 @@
 use clap::{Arg, Command};
 
 pub fn build_cli() -> Command {
-    Command::new("Kizuna")
+    Command::new("Kizuna-cli")
         .version("0.1.0")
         .author("https://github.com/felixkamau")
         .about("A CLI tool to manage RPC URLs and interact with smart contracts")
