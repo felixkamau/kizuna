@@ -1,4 +1,4 @@
-name: Publish to Crates.io
+name: Publish 
 
 on:
   push:
