@@ -1,18 +1,16 @@
-
 use clap::ArgMatches;
 
 use crate::storage::Storage;
 
-
 pub fn handle_rpc_subcommand(matches: &ArgMatches, storage: &mut Storage) {
-    if matches.subcommand_matches("list").is_some(){
+    if matches.subcommand_matches("list").is_some() {
         list_rpc_urls(storage);
-    }else if let Some(add_matches) =  matches.subcommand_matches("add"){
-        if let Some(url) = add_matches.get_one::<String>("url"){
+    } else if let Some(add_matches) = matches.subcommand_matches("add") {
+        if let Some(url) = add_matches.get_one::<String>("url") {
             add_rpc_url(url, storage);
         }
-    }else if let Some(remove_matches) = matches.subcommand_matches("remove"){
-        if let Some(url) = remove_matches.get_one::<String>("url"){
+    } else if let Some(remove_matches) = matches.subcommand_matches("remove") {
+        if let Some(url) = remove_matches.get_one::<String>("url") {
             remove_rpc_url(url, storage);
         }
     }

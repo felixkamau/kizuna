@@ -26,6 +26,17 @@ pub fn build_cli() -> Command {
                                 .help("The RPC URL you want to remove")
                                 .required(true),
                         ),
-                )
+                ),
+        )
+        .subcommand(
+            Command::new("contract")
+                .about("Interact with a smart contract")
+                .arg(
+                    Arg::new("rpc-index")
+                        .help("Index of the saved RPC URL to use")
+                        .long("rpc-index") // Declare it as a long option
+                        .value_parser(clap::value_parser!(usize)) // Value parser for usize
+                        .default_value("0"), // Default to 0 if not specified
+                ),
         )
 }
