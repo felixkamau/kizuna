@@ -11,6 +11,6 @@ repository = "https://github.com/felixkamau/kizuna"
 
 [dependencies]
 alloy = { version = "0.9.2", features = ["full"] }
-clap = "4.5.26"
+clap = "4.5.32"
 serde = { version = "1.0.217", features = ["derive"] }
 serde_json = "1.0.135"
